@@ -13,8 +13,13 @@ jobs:
               run: sudo apt-get install cowsay -y 
 
             - name: Welcome Message
-              run: |
-                  cowsay -f dragon "RUN FOR Cover" >> dragon.txt
-                  grep -i "dragon" dragon.txt
-                  cat dragon.txt
-                  ls -ltra
+              run: cowsay -f dragon "RUN FOR Cover" >> dragon.txt
+            
+            - name: Install cowsay
+              run: grep -i "dragon" dragon.txt
+
+            - name: Install cowsay
+              run: cat dragon.txt
+            
+            - name: Install cowsay
+              run: ls -ltra
