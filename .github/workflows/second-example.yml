@@ -12,14 +12,14 @@ jobs:
             - name: Install cowsay
               run: sudo apt-get install cowsay -y 
 
-            - name: Welcome Message
+            - name: Create Dragon file 
               run: cowsay -f dragon "RUN FOR Cover" >> dragon.txt
             
-            - name: Install cowsay
+            - name: Test file exists
               run: grep -i "dragon" dragon.txt
 
-            - name: Install cowsay
+            - name: cat dragon
               run: cat dragon.txt
             
-            - name: Install cowsay
+            - name: List Repo File
               run: ls -ltra
