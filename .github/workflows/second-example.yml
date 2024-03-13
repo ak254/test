@@ -9,9 +9,11 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v4
 
+            - name: Install cowsay
+              run: sudo apt-get install cowsay -y 
+
             - name: Welcome Message
               run: |
-                  sudo apt-get install cowsay -y
                   cowsay -f dragon "RUN FOR Cover" >> dragon.txt
                   grep -i "dragon" dragon.txt
                   cat dragon.txt
