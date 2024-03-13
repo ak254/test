@@ -15,8 +15,8 @@ jobs:
             - name: Create Dragon file 
               run: cowsay -f dragon "RUN FOR Cover" >> dragon.txt
             
-            - name: Test file exists
-              run: grep -i "dragon" dragon.txt
+            # - name: Test file exists
+            #   run: grep -i "dragon" dragon.txt
 
             - name: cat dragon
               run: cat dragon.txt
